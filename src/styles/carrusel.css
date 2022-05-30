@@ -1,0 +1,42 @@
+.carrusel {
+    margin: 50px 0;
+}
+
+.carrusel h2 {
+    text-align: center;
+    font-family: var(--font-family-titles);
+}
+
+.movieList {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.carrusel article {
+    /*VAR CARD WIDTH */
+    --card-width: 180px;
+    margin: 0 10px;
+    font-family: var(--font-family-text);
+    width: var(--card-width);
+    border-radius: 20px;
+    box-shadow: 2px 3px 3px #888888ba;
+    background-color: white;
+}
+
+.carrusel article img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: var(--card-width);
+}
+
+.carrusel article .articleTitle {
+    width: inherit;
+    height: 70px;
+}
+
+.carrusel article .articleTitle p {
+    width: inherit;
+    text-align: center;
+    font-size: 16px;
+}

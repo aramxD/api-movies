@@ -1,0 +1,34 @@
+header h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-family: var(--font-family-titles);
+}
+
+#searchForm {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+}
+
+#searchForm input {
+    height: 40px;
+    width: 85%;
+    padding-left: 10px;
+    border: 1px;
+    border-style: none none solid none;
+    font-family: var(--font-family-titles);
+}
+
+#searchForm button {
+    width: 40px;
+    background: none;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2px 3px 3px #888888ba;
+}
+
+#searchForm ::placeholder {
+    color: rgb(98, 98, 98);
+    padding-left: 10px;
+    font-family: var(--font-family-titles);
+}

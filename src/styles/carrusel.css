@@ -7,12 +7,6 @@
     font-family: var(--font-family-titles);
 }
 
-.movieList {
-    /* margin: 30px 10px;
-    display: flex;
-    flex-direction: row; */
-}
-
 .carrusel article {
     /*VAR CARD WIDTH */
     --card-width: 180px;

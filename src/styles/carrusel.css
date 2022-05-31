@@ -8,15 +8,15 @@
 }
 
 .movieList {
-    margin: 30px 0;
+    /* margin: 30px 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; */
 }
 
 .carrusel article {
     /*VAR CARD WIDTH */
     --card-width: 180px;
-    margin: 0 10px;
+    margin: 20px 10px;
     font-family: var(--font-family-text);
     width: var(--card-width);
     border-radius: 20px;

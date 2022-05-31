@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/api-movies/static/css/main.b35b6602.css",
-    "main.js": "/api-movies/static/js/main.a02e8e6c.js",
+    "main.css": "/api-movies/static/css/main.2554eab8.css",
+    "main.js": "/api-movies/static/js/main.1537a97a.js",
     "static/js/787.2e10f3a0.chunk.js": "/api-movies/static/js/787.2e10f3a0.chunk.js",
     "static/media/popeye_movie_poster.jpg": "/api-movies/static/media/popeye_movie_poster.ab25db5765e90afb3be5.jpg",
     "static/media/logo.svg": "/api-movies/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/api-movies/index.html",
-    "main.b35b6602.css.map": "/api-movies/static/css/main.b35b6602.css.map",
-    "main.a02e8e6c.js.map": "/api-movies/static/js/main.a02e8e6c.js.map",
+    "main.2554eab8.css.map": "/api-movies/static/css/main.2554eab8.css.map",
+    "main.1537a97a.js.map": "/api-movies/static/js/main.1537a97a.js.map",
     "787.2e10f3a0.chunk.js.map": "/api-movies/static/js/787.2e10f3a0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b35b6602.css",
-    "static/js/main.a02e8e6c.js"
+    "static/css/main.2554eab8.css",
+    "static/js/main.1537a97a.js"
   ]
 }

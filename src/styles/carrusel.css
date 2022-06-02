@@ -9,7 +9,8 @@
 
 .carrusel article {
     /*VAR CARD WIDTH */
-    --card-width: 180px;
+    --card-width: 130px;
+    /*VAR CARD WIDTH */
     margin: 20px 10px;
     font-family: var(--font-family-text);
     width: var(--card-width);
@@ -25,12 +26,15 @@
 }
 
 .carrusel article .articleTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: inherit;
-    height: 70px;
+    height: 60px;
 }
 
 .carrusel article .articleTitle p {
     width: inherit;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
 }

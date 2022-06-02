@@ -1,3 +1,19 @@
+:root {
+    --purple-light-1: #FBFAFB;
+    --purple-light-2: #EEEAF2;
+    --purple-medium-1: #AA83C8;
+    --purple-medium-2: #8B48BF;
+    --purple-medium-3: #5C218A;
+    --purple-dark-1: #3E0F64;
+    --purple-dark-2: #2A0646;
+    --yellow: #EECC75;
+    --green: #CAD297;
+    --aqua: #B7EAC5;
+    --lightBlue: #A2EEE5;
+    --darkBlue: #8EA2EA;
+    --red: #F09D9D;
+}
+
 html {
     background-color: rgb(255, 255, 255);
 }
@@ -14,7 +30,7 @@ html {
 body {
     border: 1px solid black;
     border-radius: 40px;
-    height: 100vh;
+    height: 100%;
 }
 
 .inactive {

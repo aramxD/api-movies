@@ -1,0 +1,115 @@
+/* Categories */
+
+.genreList {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genreListTitle {
+    font-family: var(--font-family-titles);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.category-container {
+    margin: 0 auto;
+    width: 45%;
+}
+
+.category-title {
+    margin-bottom: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: var(--font-family-text);
+    width: 100%;
+}
+
+.category-title::before {
+    content: '••••';
+    color: transparent;
+    /* TODO: cambiar color por ID de la categoría */
+    background-color: var(--idColor);
+    border-radius: 8px;
+    margin-right: 8px;
+    width: 8px;
+    height: 8px;
+}
+
+#id28 {
+    --idColor: var(--yellow);
+}
+
+#id12 {
+    --idColor: var(--red);
+}
+
+#id16 {
+    --idColor: var(--green);
+}
+
+#id35 {
+    --idColor: var(--lightBlue);
+}
+
+#id80 {
+    --idColor: var(--darkBlue);
+}
+
+#id99 {
+    --idColor: var(--purple-dark-1);
+}
+
+#id18 {
+    --idColor: var(--purple-medium-1);
+}
+
+#id10751 {
+    --idColor: var(--yellow);
+}
+
+#id14 {
+    --idColor: var(--red);
+}
+
+#id36 {
+    --idColor: var(--green);
+}
+
+#id27 {
+    --idColor: var(--lightBlue);
+}
+
+#id10402 {
+    --idColor: var(--darkBlue);
+}
+
+#id9648 {
+    --idColor: var(--purple-dark-1);
+}
+
+#id10749 {
+    --idColor: var(--purple-medium-1);
+}
+
+#id878 {
+    --idColor: var(--yellow);
+}
+
+#id10770 {
+    --idColor: var(--red);
+}
+
+#id53 {
+    --idColor: var(--green);
+}
+
+#id10752 {
+    --idColor: var(--lightBlue);
+}
+
+#id37 {
+    --idColor: var(--darkBlue);
+}

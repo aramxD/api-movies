@@ -11,21 +11,21 @@ function App() {
 
 
   return (
-     
+
     <div className="App">
-      
+
       {!!openDetailView && (
         <><Header />
           <Carrusel Type='trendingPreview' />
           <GenreList /></>
       )}
 
-      {!openDetailView && (
+      {/* {!!openDetailView && (
         <CategoryDetail />
-      )}
+      )} */}
 
-      
-    </div> 
+
+    </div>
   );
 }
 

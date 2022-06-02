@@ -1,7 +1,14 @@
 import React from "react";
 import ReactDOM from 'react-dom'
 import '../styles/categoryDetails.css'
-import poster from '../assets/img/popeye_movie_poster.jpg'
+
+import { MovieCard } from "../elements/movieCard";
+
+
+
+
+
+
 function CategoryDetail({ children }) {
 
 
@@ -15,49 +22,13 @@ function CategoryDetail({ children }) {
             </div>
 
             <div className="categoryDetailList">
-
-                <article>
-                    <div className="articleTitle">
-                        <p>Soy el titulo de la pelicula</p>
-                    </div>
-                    <img src={poster} alt="soy un titulo" />
-                </article>
-                <article>
-                    <div className="articleTitle">
-                        <p>Soy el titulo de la pelicula</p>
-                    </div>
-                    <img src={poster} alt="soy un titulo" />
-                </article>
-                <article>
-                    <div className="articleTitle">
-                        <p>Soy el titulo de la pelicula</p>
-                    </div>
-                    <img src={poster} alt="soy un titulo" />
-                </article>
-                <article>
-                    <div className="articleTitle">
-                        <p>Soy el titulo de la pelicula</p>
-                    </div>
-                    <img src={poster} alt="soy un titulo" />
-                </article>
-                <article>
-                    <div className="articleTitle">
-                        <p>Soy el titulo de la pelicula</p>
-                    </div>
-                    <img src={poster} alt="soy un titulo" />
-                </article>
-                <article>
-                    <div className="articleTitle">
-                        <p>Soy el titulo de la pelicula</p>
-                    </div>
-                    <img src={poster} alt="soy un titulo" />
-                </article>
-                <article>
-                    <div className="articleTitle">
-                        <p>Soy el titulo de la pelicula</p>
-                    </div>
-                    <img src={poster} alt="soy un titulo" />
-                </article>
+                <MovieCard/>
+                <MovieCard/>
+                <MovieCard/>
+                <MovieCard/>
+                <MovieCard/>
+                <MovieCard/>
+                
 
 
             </div>

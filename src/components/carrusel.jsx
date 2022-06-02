@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React  from 'react'
 // Import Swiper React components
-import axios from 'axios'
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import required modules
 import { FreeMode, } from "swiper";
@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 
 import '../styles/carrusel.css'
 import { useMovies } from '../hooks/moviesHook';
+import { MovieCard } from '../elements/movieCard';
 //import poster from '../assets/img/popeye_movie_poster.jpg'
 
 //The Movie DB API Link
@@ -73,26 +74,13 @@ function Carrusel(props) {
                     modules={[FreeMode,]}
                     className="mySwiper">
 
-                    {/* <SwiperSlide>
-                        <article>
-                            <img src={poster} alt="soy un titulo" />
-                            <div className="articleTitle">
-                                <p>Soy el titulo de la pelicula</p>
-                                <p>⭐ 9/10 IMDb</p>
-                            </div>
 
-                        </article>
-                    </SwiperSlide> */}
 
                     {movies?.results?.map((element) => {
                         return(<SwiperSlide key={element.id}>
-                            <article>
-                                <img src={`https://image.tmdb.org/t/p/w300${element.poster_path}`} alt={element.title} />
-                                <div className="articleTitle">
-                                    <p>{truncate(element.title,30)}</p>
-                                    <p>⭐ 9/10 IMDb</p>
-                                </div>
-                            </article>
+                            
+                            <MovieCard imgURL={`https://image.tmdb.org/t/p/w300${element.poster_path}`} title={element.title}/>
+                            
                         </SwiperSlide>)
                         })
                     }             

@@ -4,28 +4,33 @@ import { Header } from './components/header';
 import { Carrusel } from './components/carrusel';
 import { GenreList } from './components/genreList';
 import { CategoryDetail } from './components/categoryDetail';
-import { MainContext } from './context/mainContext';
+import { MainContext, MainProvider } from './context/mainContext';
 
 function App() {
-  const openDetailView = true
+  const SuperContext = useContext(MainContext)
+    //console.log(SuperContext)
+  
 
 
   return (
-
+    <MainProvider>
     <div className="App">
-
-      {!!openDetailView && (
-        <><Header />
+      
+        
+      
+        <Header />  
           <Carrusel Type='trendingPreview' />
-          <GenreList /></>
-      )}
+           
+          <GenreList />
+      
 
-      {/* {!!openDetailView && (
+      
         <CategoryDetail />
-      )} */}
+      
 
-
+      
     </div>
+    </MainProvider>
   );
 }
 

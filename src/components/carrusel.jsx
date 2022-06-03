@@ -11,7 +11,6 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 import '../styles/carrusel.css'
-import { useMovies } from '../hooks/moviesHook';
 import { MovieCard } from '../elements/movieCard';
 import { MainContext } from '../context/mainContext';
 

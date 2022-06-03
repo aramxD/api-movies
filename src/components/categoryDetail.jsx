@@ -13,22 +13,26 @@ import { MainContext } from "../context/mainContext";
 function CategoryDetail({ children }) {
     const SuperContext = useContext(MainContext)
     const viewDetail = SuperContext
+    const genreDetail = SuperContext.genreListView
+    const filterMovies = SuperContext.filterMoviesGenre
+    console.log('asdfdasf')
+    console.log(filterMovies)
 
     return ReactDOM.createPortal(
         <section className="categoryDetail">
-            {children}
+            
             <div className="headerCategoryDetail">
             <span className="header-arrow" onClick={()=>{viewDetail.openDetailView ? viewDetail.setOpenDetailView(false):viewDetail.setOpenDetailView(true)}}>&lt;</span>
-            <h2>(Categories) Movies</h2>
+            <h2>({genreDetail[1]}) Movies</h2>
             </div>
 
             <div className="categoryDetailList">
-                {/* <MovieCard/>
-                <MovieCard/>
-                <MovieCard/>
-                <MovieCard/>
-                <MovieCard/>
-                <MovieCard/> */}
+
+                {filterMovies?.map((element)=>{
+                    return(<MovieCard imgURL={`https://image.tmdb.org/t/p/w300${element.poster_path}`} title={element.title}/>)
+                
+                })}
+                
                 
 
 

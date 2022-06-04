@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import ReactDOM from 'react-dom'
-import '../styles/categoryDetails.css'
+import '../styles/searchDetail.css'
 
 import { MovieCard } from "../elements/movieCard";
 import { MainContext } from "../context/mainContext";
@@ -10,7 +10,7 @@ import { MainContext } from "../context/mainContext";
 
 
 
-function CategoryDetail({ children }) {
+function SearchDetail({ children }) {
     const SuperContext = useContext(MainContext)
     const viewDetail = SuperContext
     const genreDetail = SuperContext.genreListView
@@ -21,14 +21,14 @@ function CategoryDetail({ children }) {
     
     let hide;
     if(hiddeView){
-         hide = ''
-    }else{
          hide = 'inactive'
+    }else{
+         hide = ''
     }
     return ReactDOM.createPortal(
         <section className={`categoryDetail ${hide}`}>
             
-            <div className="headerCategoryDetail">
+            {/* <div className="headerCategoryDetail">
             <span className="header-arrow" onClick={()=>{viewDetail.openDetailView ? viewDetail.setOpenDetailView(false):viewDetail.setOpenDetailView(true)}}>&lt;</span>
             <h2>({genreDetail[1]}) Movies</h2>
             </div>
@@ -43,13 +43,13 @@ function CategoryDetail({ children }) {
                 
 
 
-            </div>
-
+            </div> */}
+        <h1>soy el search detail :D</h1>
 
 
         </section>,
-        document.getElementById('categoryDetail')
+        document.getElementById('searchDetail')
     )
 }
 
-export { CategoryDetail }
+export { SearchDetail }

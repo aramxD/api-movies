@@ -4,10 +4,7 @@ import { useMovies } from "../hooks/moviesHook";
 import '../styles/genreList.css'
 
 
-
-//The Movie DB API Link
-
-const API_GENRE_URL = '/genre/movie/list?api_key='
+ 
 
 
 
@@ -18,6 +15,7 @@ function GenreList() {
     const SuperContext = useContext(MainContext)
     const genres = SuperContext.genreList
     const viewDetail = SuperContext
+    
 
     return (
         <section id="genreList" className={SuperContext.inactiveView()}>

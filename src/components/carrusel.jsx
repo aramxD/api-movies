@@ -26,6 +26,7 @@ function truncate(string, limit){
 function Carrusel(props) {
     const SuperContext = useContext(MainContext)
     const movies= SuperContext.trendMovies
+    
     //console.log(movies)
 
 

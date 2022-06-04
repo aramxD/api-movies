@@ -25,8 +25,8 @@ const [genreList, setGenreList] = useMovies(API_GENRE_URL)
 const [genreListView, setGenreListView] = useState([])
 
 // filter movies by category  
-console.log('soy el id de la categoria'+genreId)
-const API_FILTER_GENRE = `https://api.themoviedb.org/3/discover/movie?&without_genres=${genreId}&api_key=8ac7684dd09df55c1e0b47396e892b7b`
+//console.log('soy el id de la categoria'+genreId)
+const API_FILTER_GENRE = `https://api.themoviedb.org/3/discover/movie?&with_genres=${genreId}&api_key=8ac7684dd09df55c1e0b47396e892b7b`
 const [filterMoviesGenre, setFilterMoviesGenre] = useState([])
 //console.log(filterMoviesGenre)
 

@@ -22,14 +22,14 @@ html {
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-    width: 375px;
+    width: 100vw;
     --font-family-titles: 'Dosis', sans-serif;
     --font-family-text: 'Red Hat Display', sans-serif;
 }
 
 body {
     border: 1px solid black;
-    border-radius: 40px;
+    border-radius: 20px;
     height: 100%;
 }
 

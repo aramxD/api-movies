@@ -22,9 +22,9 @@ header h1 {
 #searchForm button {
     width: 40px;
     background: none;
-    border-radius: 50%;
+    border-radius: 20%;
     border: none;
-    box-shadow: 2px 3px 3px #888888ba;
+    box-shadow: 2px 3px 5px #888888ba;
 }
 
 #searchForm ::placeholder {

@@ -46,7 +46,10 @@ function Carrusel(props) {
                     {movies?.results?.map((element) => {
                         return(<SwiperSlide key={element.id}>
                             
-                            <MovieCard imgURL={`https://image.tmdb.org/t/p/w300${element.poster_path}`} title={element.title}/>
+                            <MovieCard imgURL={`https://image.tmdb.org/t/p/w300${element.poster_path}`} 
+                            title={element.title} 
+                            key={element.id}
+                            voteAverage={element.vote_average}/>
                             
                         </SwiperSlide>)
                         })

@@ -10,7 +10,7 @@ function truncate(string, limit){
 }
 
 
-function MovieCard({imgURL, title} ) {
+function MovieCard({imgURL, title, voteAverage} ) {
 
     return (
         
@@ -18,7 +18,7 @@ function MovieCard({imgURL, title} ) {
             <img src={imgURL} alt={title} />
             <div className="articleTitle">
                 <p>{truncate(title,30)}</p>
-                <p>⭐ 9/10 IMDb</p>
+                <p>⭐ {voteAverage} / 10</p>
             </div>
         </article>
 

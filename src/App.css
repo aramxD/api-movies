@@ -22,7 +22,7 @@ html {
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     --font-family-titles: 'Dosis', sans-serif;
     --font-family-text: 'Red Hat Display', sans-serif;
 }

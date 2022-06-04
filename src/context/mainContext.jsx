@@ -38,8 +38,6 @@ const [filterMoviesGenre, setFilterMoviesGenre] = useState([])
             //console.log(response.data.results)
             setFilterMoviesGenre(response.data.results)
         })
-        
-        
 
     },[genreId])
 
@@ -68,6 +66,30 @@ const genreListValue=(value)=>{
     }
 }
 
+// Search movies  
+
+const [newSearchValue, setNewSearchValue] = useState('')
+const [searchMovies, setSearchMovies] = useState([])
+//console.log(searchMovies)
+function MovieSearch (){
+
+    const API_SEARCH = `https://api.themoviedb.org/3/search/movie?&query=${newSearchValue}&api_key=8ac7684dd09df55c1e0b47396e892b7b`
+    console.log('Soy la url de busqueda '+API_SEARCH)
+
+    
+        
+        axios.get(API_SEARCH).then((response)=>{
+            
+            //console.log(response.data.results)
+            setSearchMovies(response.data.results)
+        })
+
+   
+
+
+}
+
+
 
 
 
@@ -79,7 +101,11 @@ const SuperContext = {
     trendMovies,
     genreList,
     genreListView,
-    filterMoviesGenre
+    filterMoviesGenre,
+    MovieSearch,
+    newSearchValue,
+    setNewSearchValue,
+    searchMovies
     
 }
     

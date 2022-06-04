@@ -1,6 +1,7 @@
 
 import { useContext } from 'react';
 import { MainContext } from '../context/mainContext';
+import { SearchBar } from '../elements/searchBar';
 import '../styles/header.css'
 
 function Header (){
@@ -22,10 +23,7 @@ return(
     <h1 className="header-title">API Movies</h1>
     <h1 className="header-title header-title--categoryView inactive">Acción</h1>
 
-    <form id="searchForm" className="header-searchForm">
-    <input type="text" placeholder="Search for movies" />
-    <button>🔍</button>
-    </form>
+    <SearchBar/>
 </header>)
 }
 

@@ -6,6 +6,7 @@ import { GenreList } from "./components/genreList";
 import { CategoryDetail } from "./components/categoryDetail";
 import { MainContext, MainProvider } from "./context/mainContext";
 import { SearchDetail } from "./components/searchDetail";
+import { MovieDetail } from "./components/movieDetail";
 
 function App() {
 	
@@ -16,11 +17,15 @@ function App() {
 
 				<Header />
 				<Carrusel Type="trendingPreview" />
-
 				<GenreList />
-
+				
+				
 				<CategoryDetail />
-        <SearchDetail/>
+
+
+        		<SearchDetail/>
+
+				<MovieDetail/>
 			</div>
 		</MainProvider>
 	);

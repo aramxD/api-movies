@@ -16,7 +16,7 @@ function CategoryDetail({ children }) {
     const genreDetail = SuperContext.genreListView
     const filterMovies = SuperContext.filterMoviesGenre
     
-	//console.log(SuperContext.openDetailView);
+	//console.log(filterMovies);
     const hiddeView = SuperContext.openDetailView
     
     let hide;
@@ -36,7 +36,7 @@ function CategoryDetail({ children }) {
             <div className="categoryDetailList">
 
                 {filterMovies?.map((element)=>{
-                    return(<MovieCard imgURL={`https://image.tmdb.org/t/p/w300${element.poster_path}`} title={element.title} key={element.id}/>)
+                    return(<MovieCard imgURL={`https://image.tmdb.org/t/p/w300${element.poster_path}`} title={element.title} key={element.id} voteAverage={element.vote_average}/>)
                 
                 })}
                 

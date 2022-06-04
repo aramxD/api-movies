@@ -4,6 +4,7 @@ import '../styles/searchDetail.css'
 
 import { MovieCard } from "../elements/movieCard";
 import { MainContext } from "../context/mainContext";
+import { SearchBar } from "../elements/searchBar";
 
 
 
@@ -14,7 +15,7 @@ function SearchDetail({ children }) {
     const SuperContext = useContext(MainContext)
     const viewDetail = SuperContext
     const genreDetail = SuperContext.genreListView
-    const filterMovies = SuperContext.filterMoviesGenre
+    const filterMovies = SuperContext.searchMovies
     
 	//console.log(SuperContext.openDetailView);
     const hiddeView = SuperContext.openDetailView
@@ -25,26 +26,36 @@ function SearchDetail({ children }) {
     }else{
          hide = ''
     }
+
+
     return ReactDOM.createPortal(
-        <section className={`categoryDetail ${hide}`}>
-            
-            {/* <div className="headerCategoryDetail">
+        <section id="SearchDetail" className={`searchDetail ${hide}`}>
+            <h2>Search Movies</h2>
+            <SearchBar/>
+
+            <div className="headerSearchDetail">
             <span className="header-arrow" onClick={()=>{viewDetail.openDetailView ? viewDetail.setOpenDetailView(false):viewDetail.setOpenDetailView(true)}}>&lt;</span>
             <h2>({genreDetail[1]}) Movies</h2>
             </div>
 
-            <div className="categoryDetailList">
+            <div className="searchDetailList">
 
                 {filterMovies?.map((element)=>{
-                    return(<MovieCard imgURL={`https://image.tmdb.org/t/p/w300${element.poster_path}`} title={element.title} key={element.id}/>)
+                    return(
+                    <MovieCard 
+                    imgURL={`https://image.tmdb.org/t/p/w300${element.poster_path}`} 
+                    title={element.title} 
+                    key={element.id}
+                    voteAverage={element.vote_average}
+                    />)
                 
                 })}
                 
                 
 
 
-            </div> */}
-        <h1>soy el search detail :D</h1>
+            </div>
+        
 
 
         </section>,

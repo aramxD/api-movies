@@ -14,14 +14,14 @@
     margin: 20px 10px;
     font-family: var(--font-family-text);
     width: var(--card-width);
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 2px 3px 3px #888888ba;
     background-color: white;
 }
 
 .carrusel article img {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: var(--card-width);
 }
 

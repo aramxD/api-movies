@@ -1,15 +1,19 @@
-.headerCategoryDetail {
+#MovieDetail {
+    height: 750px;
+}
+
+.headerSearchDetail {
     margin-top: 30px;
     display: flex;
     flex-direction: row;
     align-items: center
 }
 
-.headerCategoryDetail h2 {
+.headerSearchDetail h2 {
     width: 80%;
 }
 
-.headerCategoryDetail .header-arrow {
+.headerSearchDetail .header-arrow {
     width: 20%;
     margin: 0;
     text-align: center;

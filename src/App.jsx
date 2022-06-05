@@ -7,6 +7,7 @@ import { CategoryDetail } from "./components/categoryDetail";
 import { MainContext, MainProvider } from "./context/mainContext";
 import { SearchDetail } from "./components/searchDetail";
 import { MovieDetail } from "./components/movieDetail";
+import { MovieTrends } from "./components/movieTrends";
 
 function App() {
 	
@@ -16,7 +17,8 @@ function App() {
 			<div className="App">
 
 				<Header />
-				<Carrusel Type="trendingPreview" />
+				<MovieTrends Type="Movie Trends" />
+				{/* <Carrusel Type="trendingPreview" /> */}
 				<GenreList />
 				
 				

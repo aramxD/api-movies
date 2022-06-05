@@ -47,6 +47,7 @@ function SearchDetail({ children }) {
                     title={element.title} 
                     key={element.id}
                     voteAverage={element.vote_average}
+                    movieId={element.id}
                     />)
                 
                 })}

@@ -36,7 +36,12 @@ function CategoryDetail({ children }) {
             <div className="categoryDetailList">
 
                 {filterMovies?.map((element)=>{
-                    return(<MovieCard imgURL={`https://image.tmdb.org/t/p/w300${element.poster_path}`} title={element.title} key={element.id} voteAverage={element.vote_average}/>)
+                    return(<MovieCard 
+                        imgURL={`https://image.tmdb.org/t/p/w300${element.poster_path}`} 
+                        title={element.title} 
+                        key={element.id} 
+                        voteAverage={element.vote_average}
+                        movieId={element.id}/>)
                 
                 })}
                 

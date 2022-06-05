@@ -1,0 +1,63 @@
+#MovieDetail {
+    margin-top: 30px;
+}
+
+#MovieDetail>h2 {
+    text-align: center;
+}
+
+.headerMovieDetail {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center
+}
+
+.headerMovieDetail h2 {
+    width: 80%;
+}
+
+.headerMovieDetail .header-arrow {
+    width: 20%;
+    margin: 0;
+    text-align: center;
+}
+
+.header-arrow {
+    font-weight: bold;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.header-arrow--white {
+    color: white;
+}
+
+.MovieDetail-header {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: 30px auto;
+}
+
+.MovieDetail-header img {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px #888888ba;
+}
+
+
+/* .MovieDetail-stats {
+    margin-left: 10px;
+} */
+
+.MovieDetail-stats p {
+    width: 120px;
+}
+
+.MovieDetail-stats p:nth-child(even) {
+    font-size: 20px;
+    width: 120px;
+    margin: 3px auto 15px;
+    font-weight: bold;
+}

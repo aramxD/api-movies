@@ -5,19 +5,19 @@ import React, { useContext }  from 'react'
 
 import '../styles/movieTrends.css'
 import { MainContext } from '../context/mainContext';
-import { Carrusel } from './carrusel';
+import { Carrusel } from '../elements/carrusel';
 
 
 
 function MovieTrends() {
-    const SuperContext = useContext(MainContext)
-    const movies= SuperContext.trendMovies
+    const {controlView, goToMovieDetail, trendMovies, inactiveView} = useContext(MainContext)
+    const movies=  trendMovies
     
     //console.log(movies)
 
 
     return (
-        <section id='trendingPreview' className={`carrusel ${SuperContext.inactiveView()}`}>
+        <section id='trendingPreview' className={`carrusel ${inactiveView(controlView.home)}`}>
             <h2>Movie Trends </h2>
             <div className="movieList">
                 

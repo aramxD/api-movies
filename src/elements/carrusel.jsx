@@ -11,7 +11,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
 import '../styles/carrusel.css'
-import { MovieCard } from '../elements/movieCard';
+import { MovieCard } from './movieCard';
 
 
 

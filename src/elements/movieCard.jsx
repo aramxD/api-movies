@@ -18,13 +18,14 @@ function truncate(string, limit){
 
 function MovieCard({imgURL, title, movieId, voteAverage} ) {
     //Super Context
-    const { SearchMovieById} = useContext(MainContext)
+    const { SearchMovieById, goToMovieDetail} = useContext(MainContext)
      
 
     function onMovieClick(){
         //console.log('le diste click a la pelicula: ' +movieId )
         
         SearchMovieById(movieId)
+        goToMovieDetail()
     }
 
 

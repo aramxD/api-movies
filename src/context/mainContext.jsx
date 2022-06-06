@@ -9,6 +9,49 @@ const API_GENRE_URL = "/genre/movie/list?api_key=";
 const MainContext = createContext();
 
 export const MainProvider = ({ children }) => {
+	const [controlView, setControlView] = useState({
+		'home': true,
+		'CDetail' : false,
+		'SResults' : false,
+		'MDetail': false
+	})
+
+	
+    function returnHome(){
+        setControlView({
+            'home': true,
+            'CDetail' : false,
+            'SResults' : false,
+            'MDetail': false
+        })
+    }
+	function goToCategoryDetails(){
+        setControlView({
+            'home': false,
+            'CDetail' : true,
+            'SResults' : false,
+            'MDetail': false
+        })
+    }
+	function goToSearchResults(){
+        setControlView({
+            'home': false,
+            'CDetail' : false,
+            'SResults' : true,
+            'MDetail': false
+        })
+    }
+	function goToMovieDetail(){
+        setControlView({
+            'home': false,
+            'CDetail' : false,
+            'SResults' : false,
+            'MDetail': true
+        })
+    }
+	
+
+
 	const [openDetailView, setOpenDetailView] = useState(false);
 	const [genreId, setGenreId] = useState();
 
@@ -35,11 +78,11 @@ export const MainProvider = ({ children }) => {
 		});
 	}, [genreId]);
 
-	const inactiveView = () => {
-		if (openDetailView) {
-			return "inactive";
-		} else {
+	const inactiveView = (state) => {
+		if (state) {
 			return "";
+		} else {
+			return "inactive";
 		}
 	};
 
@@ -48,15 +91,9 @@ export const MainProvider = ({ children }) => {
 		setGenreId(value[0]);
 
 		//console.log(genreId)
-		//console.log(genreListView)
+		console.log('set list view'+genreListView)
 
-		if (openDetailView) {
-			setOpenDetailView(false);
-			return "inactive";
-		} else {
-			setOpenDetailView(true);
-			return "";
-		}
+
 	};
 
 	// Search movies
@@ -99,6 +136,7 @@ export const MainProvider = ({ children }) => {
     }
 
 	const SuperContext = {
+		controlView, returnHome, goToCategoryDetails, goToSearchResults, goToMovieDetail,
 		openDetailView,
 		setOpenDetailView,
 		inactiveView,

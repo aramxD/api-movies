@@ -10,26 +10,26 @@ import { MainContext } from "../context/mainContext";
 
 
 
-function CategoryDetail({ children }) {
-    const SuperContext = useContext(MainContext)
-    const viewDetail = SuperContext
-    const genreDetail = SuperContext.genreListView
-    const filterMovies = SuperContext.filterMoviesGenre
+function CategoryDetail() {
+    const {controlView, 
+        inactiveView, 
+        openDetailView, 
+        returnHome, 
+        genreListView, 
+        filterMoviesGenre} = useContext(MainContext)
+
+    const genreDetail = genreListView
+    const filterMovies = filterMoviesGenre
     
-	//console.log(filterMovies);
-    const hiddeView = SuperContext.openDetailView
+	console.log('genre details '+filterMovies);
     
-    let hide;
-    if(hiddeView){
-         hide = ''
-    }else{
-         hide = 'inactive'
-    }
+    
+    
     return ReactDOM.createPortal(
-        <section className={`categoryDetail ${hide}`}>
+        <section className={`categoryDetail ${inactiveView(controlView.CDetail)}`}>
             
             <div className="headerCategoryDetail">
-            <span className="header-arrow" onClick={()=>{viewDetail.openDetailView ? viewDetail.setOpenDetailView(false):viewDetail.setOpenDetailView(true)}}>&lt;</span>
+            <span className="header-arrow" onClick={()=>{ returnHome() }}>&lt;</span>
             <h2>({genreDetail[1]}) Movies</h2>
             </div>
 

@@ -12,21 +12,26 @@ import '../styles/genreList.css'
 
 function GenreList() {
     
-    const {openDetailView, genreListValue, genreList, inactiveView} = useContext(MainContext)
-    const genres = genreList
+    const {controlView, goToCategoryDetails, genreListValue, genreList, inactiveView} = useContext(MainContext)
     
+    //console.log('vista home'+controlView.home)
+    const openDetailView=(value)=>{
+        goToCategoryDetails()
+        genreListValue(value)
+    }
+ 
     
 
     return (
-        <section id="genreList" className={inactiveView()}>
+        <section id="genreList" className={inactiveView(controlView.home)}>
         <h2 className="genreListTitle" >Categories</h2>
         <div className="genreList">
             
             
-            {genres?.genres?.map((genre)=>{
+            {genreList?.genres?.map((genre)=>{
                 return(                                                      
                     <div className="category-container" key={genre.id} 
-                    onClick={()=>{openDetailView ? genreListValue([genre.id, genre.name]):genreListValue([genre.id, genre.name])}}>
+                    onClick={()=>{openDetailView([genre.id, genre.name]) }}>
                         <h3 id={`id${genre.id}`} className="category-title">{genre.name}</h3>
                     </div>
                 )

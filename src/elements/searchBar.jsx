@@ -6,7 +6,7 @@ import { MainContext } from "../context/mainContext";
 
 
 function SearchBar() {
-	const {MovieSearch, setNewSearchValue} = useContext(MainContext)
+	const {MovieSearch, setNewSearchValue, goToSearchResults} = useContext(MainContext)
 	
 	
 	const onChange = (event) => {
@@ -17,6 +17,7 @@ function SearchBar() {
         event.preventDefault();
 		setNewSearchValue(event.target.value)
 		MovieSearch()
+		goToSearchResults()
         //createTodo(newTodoValue)  <--- aqui va el codigo que envia la busqueda
 		
 

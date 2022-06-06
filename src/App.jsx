@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./App.css";
 import { Header } from "./components/header";
-import { Carrusel } from "./components/carrusel";
+
 import { GenreList } from "./components/genreList";
 import { CategoryDetail } from "./components/categoryDetail";
 import { MainContext, MainProvider } from "./context/mainContext";
@@ -18,7 +18,7 @@ function App() {
 
 				<Header />
 				<MovieTrends Type="Movie Trends" />
-				{/* <Carrusel Type="trendingPreview" /> */}
+				
 				<GenreList />
 				
 				

@@ -3,25 +3,40 @@ import ReactDOM from "react-dom";
 import "../styles/movieDetail.css";
 
 import { MainContext } from "../context/mainContext";
-import { Carrusel } from "./carrusel";
+import { Carrusel } from "../elements/carrusel";
 
 function MovieDetail() {
-	const { detailMovieId, relatedMovies,openDetailView, genreListValue } = useContext(MainContext);
+	const {controlView, 
+		returnHome, 
+		goToMovieDetail,
+		goToCategoryDetails, 
+		detailMovieId, 
+		relatedMovies, 
+		genreListValue,
+		inactiveView } = useContext(MainContext);
 	
 	//console.log(detailMovieId.genres)
+	// const openDetailView=()=>{
+    //     goToMovieDetail()
+        
+    // }
+	const openCategorylist=(value)=>{
+        goToCategoryDetails()
+        genreListValue(value)
+    }
 
 	if (!detailMovieId) {
 		return null;
 	}
 
 	return ReactDOM.createPortal(
-		<section id="MovieDetail" className={`MovieDetail`}>
+		<section id="MovieDetail" className={`MovieDetail ${inactiveView(controlView.MDetail)}`}>
 			
 
 			
 
 			<div className="headerMovieDetail">
-				<span className="header-arrow">&lt;</span>
+				<span className="header-arrow" onClick={()=>{ returnHome() }}>&lt;</span>
 				<h2> {detailMovieId.title}</h2>
 			</div>
 
@@ -57,7 +72,7 @@ function MovieDetail() {
 							id={`id${element.id}`} 
 							className="genre" 
 							key={element.id}
-							onClick={()=>{openDetailView ? genreListValue([element.id, element.name]):genreListValue([element.id, element.name])}}
+							onClick={()=>{openCategorylist([element.id, element.name]) }}
 							>{element.name}</p>;
 						})}
 					</div>

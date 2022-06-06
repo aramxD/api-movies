@@ -12,35 +12,35 @@ import { SearchBar } from "../elements/searchBar";
 
 
 function SearchDetail({ children }) {
-    const SuperContext = useContext(MainContext)
-    const viewDetail = SuperContext
-    const genreDetail = SuperContext.genreListView
-    const filterMovies = SuperContext.searchMovies
+    const {controlView,
+        inactiveView, 
+        returnHome, 
+        categoryDetails, 
+        searchResults,  
+        movieDetail,
+        enreListView,
+        searchMovies,
+        openDetailView,
+        setOpenDetailView} = useContext(MainContext)
     
-	//console.log(SuperContext.openDetailView);
-    const hiddeView = SuperContext.openDetailView
     
-    let hide;
-    if(hiddeView){
-         hide = 'inactive'
-    }else{
-         hide = ''
-    }
+    
+
 
 
     return ReactDOM.createPortal(
-        <section id="SearchDetail" className={`searchDetail ${hide}`}>
+        <section id="SearchDetail" className={`searchDetail ${inactiveView(controlView.SResults)}`}>
             <h2>Search Movies</h2>
             <SearchBar/>
 
             <div className="headerSearchDetail">
-            <span className="header-arrow" onClick={()=>{viewDetail.openDetailView ? viewDetail.setOpenDetailView(false):viewDetail.setOpenDetailView(true)}}>&lt;</span>
-            <h2>({genreDetail[1]}) Movies</h2>
+            <span className="header-arrow" onClick={()=>{returnHome()}}>&lt;</span>
+            <h2>Search Results</h2>
             </div>
 
             <div className="searchDetailList">
 
-                {filterMovies?.map((element)=>{
+                {searchMovies?.map((element)=>{
                     return(
                     <MovieCard 
                     imgURL={`https://image.tmdb.org/t/p/w300${element.poster_path}`} 

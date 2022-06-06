@@ -8,6 +8,7 @@ import { MainContext, MainProvider } from "./context/mainContext";
 import { SearchDetail } from "./components/searchDetail";
 import { MovieDetail } from "./components/movieDetail";
 import { MovieTrends } from "./components/movieTrends";
+import { Footer } from "./components/footer";
 
 function App() {
 	
@@ -28,6 +29,7 @@ function App() {
         		<SearchDetail/>
 
 				<MovieDetail/>
+				<Footer/>
 			</div>
 		</MainProvider>
 	);

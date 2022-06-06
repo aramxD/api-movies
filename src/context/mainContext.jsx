@@ -91,7 +91,7 @@ export const MainProvider = ({ children }) => {
 		setGenreId(value[0]);
 
 		//console.log(genreId)
-		console.log('set list view'+genreListView)
+		//console.log('set list view'+genreListView)
 
 
 	};
@@ -103,7 +103,7 @@ export const MainProvider = ({ children }) => {
 	//console.log(searchMovies)
 	function MovieSearch() {
 		const API_SEARCH = `https://api.themoviedb.org/3/search/movie?&query=${newSearchValue}&api_key=8ac7684dd09df55c1e0b47396e892b7b`;
-		console.log("Soy la url de busqueda " + API_SEARCH);
+		//console.log("Soy la url de busqueda " + API_SEARCH);
 
 		axios.get(API_SEARCH).then((response) => {
 			//console.log(response.data.results)
@@ -115,8 +115,8 @@ export const MainProvider = ({ children }) => {
     //Search one movie By ID
     const [detailMovieId, setDetailMovieId] = useState();
     const [relatedMovies, setRealatedMovies] = useState([]);
-    console.log('detailMovieId= '+detailMovieId)
-    console.log(detailMovieId)
+    //console.log('detailMovieId= '+detailMovieId)
+    //console.log(detailMovieId)
     function SearchMovieById(id){
         
         //setMovieSearchId(id)

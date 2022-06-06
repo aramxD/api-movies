@@ -11,14 +11,10 @@ import { SearchBar } from "../elements/searchBar";
 
 
 
-function SearchDetail({ children }) {
+function SearchDetail( ) {
     const {controlView,
         inactiveView, 
         returnHome, 
-        categoryDetails, 
-        searchResults,  
-        movieDetail,
-        enreListView,
         searchMovies,
         openDetailView,
         setOpenDetailView} = useContext(MainContext)

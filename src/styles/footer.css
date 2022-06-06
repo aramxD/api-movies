@@ -1,0 +1,21 @@
+footer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background: #000;
+    height: 50px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    width: 100px;
+}
+
+footer img {
+    width: 30px;
+}

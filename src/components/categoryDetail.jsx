@@ -21,7 +21,7 @@ function CategoryDetail() {
     const genreDetail = genreListView
     const filterMovies = filterMoviesGenre
     
-	console.log('genre details '+filterMovies);
+	//console.log('genre details '+filterMovies);
     
     
     

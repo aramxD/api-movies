@@ -3,9 +3,9 @@
     --purple-light-2: #EEEAF2;
     --purple-medium-1: #AA83C8;
     --purple-medium-2: #8B48BF;
-    --purple-medium-3: #5C218A;
-    --purple-dark-1: #3E0F64;
-    --purple-dark-2: #2A0646;
+    --purple-medium-3: #ad67e2;
+    --purple-dark-1: #d7a6ff;
+    --purple-dark-2: #3100e2;
     --yellow: #EECC75;
     --green: #CAD297;
     --aqua: #B7EAC5;
@@ -28,6 +28,8 @@ html {
 }
 
 body {
+    max-width: 400px;
+    margin: 0 auto;
     border: 1px solid black;
     border-radius: 20px;
     height: 100%;

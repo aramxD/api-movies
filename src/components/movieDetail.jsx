@@ -6,8 +6,8 @@ import { MainContext } from "../context/mainContext";
 import { Carrusel } from "./carrusel";
 
 function MovieDetail() {
-	const { detailMovieId, relatedMovies } = useContext(MainContext);
-
+	const { detailMovieId, relatedMovies,openDetailView, genreListValue } = useContext(MainContext);
+	
 	//console.log(detailMovieId.genres)
 
 	if (!detailMovieId) {
@@ -16,9 +16,9 @@ function MovieDetail() {
 
 	return ReactDOM.createPortal(
 		<section id="MovieDetail" className={`MovieDetail`}>
-			<h2>Detail Movies</h2>
+			
 
-			{!detailMovieId && <p>asdfasdfasdf</p>}
+			
 
 			<div className="headerMovieDetail">
 				<span className="header-arrow">&lt;</span>
@@ -43,17 +43,31 @@ function MovieDetail() {
 					</div>
 				</div>
 				<div className="MovieDetail-body">
+					<div className="MovieLink">
+					<p>Link:</p>
 					<a href={detailMovieId.homepage}>Homepage</a>
-
+					</div>
+					<div className="MovieInfo">
+					<p>Overview</p>	
 					<p>{detailMovieId.overview}</p>
+					</div>
 					<div className="MovieGenres">
 						{detailMovieId.genres?.map((element) => {
-							return <p key={element.id}>{element.name}</p>;
+							return <p 
+							id={`id${element.id}`} 
+							className="genre" 
+							key={element.id}
+							onClick={()=>{openDetailView ? genreListValue([element.id, element.name]):genreListValue([element.id, element.name])}}
+							>{element.name}</p>;
 						})}
 					</div>
+					
 				</div>
 			</div>
-            <Carrusel Movies={relatedMovies}/>
+            <div className="RelatedMovies">
+						<h3>Related Movies</h3>
+						<Carrusel Movies={relatedMovies}/>
+					</div>
 		</section>,
 		document.getElementById("movieDetail")
 	);

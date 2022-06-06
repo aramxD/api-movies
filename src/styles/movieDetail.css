@@ -61,3 +61,140 @@
     margin: 3px auto 15px;
     font-weight: bold;
 }
+
+.MovieDetail-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    margin: 30px auto;
+}
+
+.MovieLink {
+    display: flex;
+    margin: 10px 0;
+}
+
+.MovieLink p {
+    width: auto;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.MovieInfo {
+    margin: 10px 0;
+}
+
+.MovieInfo p:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.MovieGenres {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px 0;
+}
+
+.MovieGenres .genre {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid black;
+    box-shadow: 4px 8px 4px #888888ba;
+    width: auto;
+    background-color: var(--idColor);
+}
+
+.MovieGenres .genre:hover {
+    box-shadow: 2px 3px 3px #646464;
+    color: white;
+}
+
+.MovieGenres .genre:active {
+    background-color: #000000cb;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.RelatedMovies {
+    text-align: center;
+}
+
+#id28 {
+    --idColor: var(--yellow);
+}
+
+#id12 {
+    --idColor: var(--red);
+}
+
+#id16 {
+    --idColor: var(--green);
+}
+
+#id35 {
+    --idColor: var(--lightBlue);
+}
+
+#id80 {
+    --idColor: var(--darkBlue);
+}
+
+#id99 {
+    --idColor: var(--purple-dark-1);
+}
+
+#id18 {
+    --idColor: var(--purple-medium-1);
+}
+
+#id10751 {
+    --idColor: var(--yellow);
+}
+
+#id14 {
+    --idColor: var(--red);
+}
+
+#id36 {
+    --idColor: var(--green);
+}
+
+#id27 {
+    --idColor: var(--lightBlue);
+}
+
+#id10402 {
+    --idColor: var(--darkBlue);
+}
+
+#id9648 {
+    --idColor: var(--purple-dark-1);
+}
+
+#id10749 {
+    --idColor: var(--purple-medium-1);
+}
+
+#id878 {
+    --idColor: var(--yellow);
+}
+
+#id10770 {
+    --idColor: var(--red);
+}
+
+#id53 {
+    --idColor: var(--green);
+}
+
+#id10752 {
+    --idColor: var(--lightBlue);
+}
+
+#id37 {
+    --idColor: var(--darkBlue);
+}

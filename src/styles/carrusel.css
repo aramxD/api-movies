@@ -19,6 +19,18 @@ article {
     background-color: white;
 }
 
+article:hover {
+    background-color: #000000;
+    box-shadow: 2px 3px 3px #646464;
+    color: white;
+}
+
+article:active {
+    background-color: #000000cb;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
 article img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;

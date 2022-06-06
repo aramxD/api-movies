@@ -39,37 +39,3 @@
     align-items: center;
     margin-top: 30px;
 }
-
-.categoryDetail article {
-    /*VAR CARD WIDTH */
-    --card-width: 130px;
-    /*VAR CARD WIDTH */
-    margin: 10px 10px;
-    font-family: var(--font-family-text);
-    width: var(--card-width);
-    border-radius: 10px;
-    box-shadow: 2px 3px 3px 3px #888888ba;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.categoryDetail article img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    width: var(--card-width);
-}
-
-.categoryDetail article .articleTitle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: inherit;
-    height: 60px;
-}
-
-.categoryDetail article .articleTitle p {
-    width: inherit;
-    text-align: center;
-    font-size: 14px;
-}
